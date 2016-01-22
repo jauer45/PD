@@ -1,0 +1,208 @@
+This document was used for the construction of the DNA music
+algorithm. The work is not particularly unique or original. This is just
+my attempt at framing what Dr. Beamer has already done in Puredata
+with my own "quircks".   
+  
+
+I. DNA Algorithmic Music
+
+	A REF:
+	----------- 
+	https://en.wikipedia.org/wiki/Genetic_code
+
+
+	SOME RULES:
+	-----------
+	a) [A,G,C,T] -> simple scale translation [A3,G3,C3,E3] (* middle C)
+	   [A,G,C,U] -> [A3,G3,C3,E3] RNA
+	b) Protein Amino Acid Assembly is our "sheet music"
+	c) a space is transliterated as a rest
+	d) Bindings: A-T and G-C most common
+	e) RNA CODON TABLE
+		DNA TABLE virtually identical with 'T' replacing 'U'
+
+		4 (4th power) = 64
+		4 * 4 matrix (x-axis/UCAG * y-axis/UCAG)
+
+
+	LOOKING AT SCALE TRANSLATION AGAINST 
+	(Major) Scale		Chord Seq
+	C 			Am7(9), Dm7(9), G7(13/9), C(9/6) 
+	F (Bb)			Dm7(9), Gm7(9), C7(13/9), F(9/6)
+
+	Bb (Bb,Eb)		Gm7(9), Cm7(9), F7(13/9), Bb(9/6)		
+	Eb (Bb,Eb,Ab)		Cm7(9), Fm7(9), Bb7(13/9), Eb(9/6)
+	Ab (Bb,Eb,Ab,Db)	Fm7(9), Bbm7(9), Eb7(13/9), Ab(9/6)
+	Db (Bb,Eb,Ab,Db,Gb)	Bbm7(9), Ebm7(9), Ab7(13/9), Db(9/6)
+	Gb (Bb,Eb,Ab,Db,Gb,Cb)	Ebm7(9), Abm7(9), Db7(13/9), Gb(9/6)
+
+	B (F#,C#,G#,D#,A#)	G#m7(9), C#m7(9), F#7(13/9), B(9/6)
+	E (F#,C#,G#,D#)		C#m7(9), F#m7(9), B7(13/9), E(9/6)
+	A (F#,C#,G#)		F#m7(9), Bm7(9), E7(13/9), A(9/6)
+	D (F#,C#)		Bm7(9), Em7(9), A7(13/9), D(9/6)
+	G (F#)			Em7(9), Am7(9), D(13/9), G(9/6)
+
+
+	((7 + 5) * 4) 48
+	4/6/8/12
+		
+	1stBase	2ndBase			3rdBase
+		U    C	  A    G
+	U	UUU, UCU, UAU, UGU	U
+		UUA, UCC, UAC, UGC	C  
+		UUC, UCA, UAA, UGA	A
+		UUG, UCG, UAG, UGG	G
+		
+	C	CUU, CCU, CAU, CGU	U
+		CUC, CCC, CAC, CGC	C
+		CUA, CCA, CAA, CGA	A
+		CUG, CCG, CAG, CGG	G
+
+	A	AUU, ACU, AAU, AGU 	U
+		AUA, ACC, AAC, AGC	C
+		AUC, ACA, AAA, AGA	A
+		AUG, ACG, AAG, AGG	G
+
+	G	GUU, GCU, GAU, GGU	U
+		GUA, GCC, GAC, GGC	C
+		GUC, GCA, GAA, GGA	A
+		GUG, GCG, GAG, GGG	G
+
+	((4 * 4) * 4) 64
+	4/8/16
+
+
+	f) AMINO ACID TABLE:
+	---------------------
+		Column 1 / U
+		L-phenylalanine: [UUU,UUC]
+		Leucine: [UUA,UUG,CUU,CUC,CUA,CUG]
+		Isoleucine: [AUU,AUC,AUA]
+		Methionine: [AUG]
+		Valine: [GUU,GUC,GUA,GUG]
+
+		Column 2 / C
+		+ Serine: [UCU,UCC,UCA,UCG,AGU,AGC]
+		Proline: [CCU,CCC,CCA,CCG]
+		Threonine: [ACU,ACC,ACA,ACG] 
+		Alanine: [GCU,GCC,GCA,GCG]
+
+		Column 3 / A
+		Tyrosine: [UAC,UAU]
+		Stop (Ochre): [UAA]
+		Stop (amber): [UAG]
+		Histidine: [CAU,CAC]
+		Glutamine: [CAA,CAG]
+		Asparagine: [AAU,AAC]
+		Lysine: [AAA,AAG]
+		Aspartic acid: [GAU,GAC]
+		Glutamic acid: [GAA,GAG]
+
+		Column 4 / G
+		Cysteine: [UGU,UGC]
+		Stop (Opal): [UGA]
+		Tryptophan: [UGG]
+		Arginine: [CGU,CGC,CGA,CGG,AGA,AGG]
+		+ Serine: [UCU,UCC,UCA,UCG,AGU,AGC]
+		Arginine: [CGU,CGC,CGA,CGG,AGA,AGG]
+		Glycine: [GGU, GGC, GGA, GGG]
+	(24)
+	
+	h) START CODON: [AUG]
+	   STOP CODON: [UAA,UGA,UAG,UAR,URA]
+	 
+
+II. Wave Table Synthesis for setting melodic phrases:
+
+	a) FM Synthesis + Addative Synthesis
+		-> 16 oscillators [osc~, phasor~]
+		   modulate each other against set GATC keys 
+
+	b) Music written via textread func
+		
+ 
+
+Using simple translation for Human Insulin:
+(source: http://www.bio.davidson.edu/Courses/Molbio/MolStudents/spring2005/Dresser/My%20favorite%20Protein.html)
+
+
+	CHAIN A
+				     -------------------------------
+				     |				   |
+	Gly - IIe - Val - Glu - Gln Cys - Cys - Thr - Ser - Ile - Cys - Ser - Leu - Tyr - Gln - Leu - Glu - Asn - Tyr - Cys - Asn
+					    \										/
+	Phe - Val - Asn - Gln - His - Leu - Cys - Gly - Ser - His - Leu - Val - Glu - Ala - Leu - Tyr - Leu - Val - Cys - Gly - Glu - Arg - Gly - Phe - Phe - Tyr - Thr - Pro - Lys - Thr
+
+
+	CHAIN B 	
+			
+		(Left it out here and just used the diagram ref'd above to complete)
+		(NOTE: Not everything below is filled out as I was running out of
+		       time and brainpower; again, followed the ref above and the
+		       freq2note TXT document here, (in this PD github dir) for
+		       translation to Puredata (PD).  
+
+
+	TRANSLATION:
+	------------
+
+	CHAIN A (21)
+	
+	       Isoleucine
+	gly  - (ile) -  val -    Glu -  Gln -   Cys -  Cys -  Thr - Ser -  Ile -   Cys -  Ser -  Leu - 	     Tyr -  Gln -  Leu -       Glu -  Asn -  Tyr -  Cys -  Asn
+	GG[*]  AT[TAC]  CT[TCA]  GA[AG] CA[AG]  TG[TC] TG[TC] AC[*] AG[TC] AT[TAC] TG[TC] AG[TC] TT[AG]CT[*] TA[TC] CA[AG] TT[AG]CT[*] GA[AG] AA[TC] TA[TC] TG[TC] AA[TC] 
+	GG[*]  AU[UAC]  CU[UCA]  GA[AG] CA[AG]  TG[UC] UG[UC] AC[*] AG[UC] AU[UAC] UG[UC] AG[UC] UU[AG]CU[*] UA[UC] CA[AG] UU[AG]CU[*] GA[AG] AA[UC] UA[UC] UG[UC] AA[UC]
+
+	Main		: GGT ATT CTA GAA CAA ...
+	Music Main (Pd)	: 1[GGE GGC GGA GGG] 2[AEE AEC AEA] 3[CEE CEC CEA] 4[GAA GAG] 5[CAA CAG] 
+			  6[EGE EGC] 7[EGE EGC] 8[ACE ACC ACA ACG] 9[AGE AGC] 10[AEE AEC AEA AEG]
+			  11[TGT TGC] 12[AGT GC] 13[TTA TTG CTT CTC CTA CTG] 14[TAT TAC] 15[CAA CAG] 
+			  16[TTA TTG CTT CTC CTA CTAG] 17[GAA GAG] 18[AAT AAC] 19[TAT TAC] 20[AAT AAC] 
+
+	Sound Freq (C3)	: 1.00[196|196|164.81]       1.10[196|196|130.81]       1.20[196|196|220]	       1.30[196|196|196]
+			  2.00[220|164.81|164.81]    2.10[220|164.81|130.81]    2.20[220|164.81|220]
+			  3.00[130.81|164.81|164.81] 3.10[130.81|164.81|130.81] 3.20[130.81|164.81|220]
+			  4.00[196|220|220] 	     4.10[196|200|196]
+			  5.00[130.81|220|200] 	     5.10[130.81|200|196]
+			  6.00[164.81|196|164.81]    6.10[164.81|196|130.81]
+			  7.00[164.81|196|164.81]    7.10[164.81|196|130.81]
+			  8.00[220|130.81|164.81]    8.10[220|130.81|130.81]    8.20[220|130.81|220]    	8.30[220|130.81|196]
+			  9.00[220|196|164.81]	     9.10[220|196|130.81] 
+			  10.0[] -
+			  11.0[] - 
+			  12.0[] - 
+			  13.0[164.81|164.81|220]    13.1[164.81|164.81|196]	13.2[130.81|164.81|164.81]	13.3[130.81|164.81|130.81] 	13.3[130.81|164.81|220] 	13.3[130.81|164.81|196]
+			  14.0[164.81|220|164.81]    14.1[164.81|220|130.81]
+			  15.0[] -
+			  16.0[] - 
+			  17.0[] -
+			  18.0[] 
+			  19.0[] 
+			  20.0[] 
+
+ 
+	CHAIN B (30)
+
+	(NEW: Phe | His | Ala | Arg)
+	Phe -  Val -   Asn - Gln - His -  Leu - Cys - Gly - Ser - His - Leu - Val - Glu - Ala - Leu - Tyr - Leu - Val - Cys - =Gly - Glu - Arg - Gly - Phe - Phe - Tyr - Thr - Pro - Lys - Thr
+	TT[TC] []      []    []    CA[TC] []    []    []    []    []    []    []    []    GC[*] ...*   ...				   AG[AG]
+	UU[UC] []      []    []    CA[UC] []    []    []    []    []    []    []    []    GC[*] ...* 
+
+	Main		: [see directly above and ref Chain A amino acid codon data]
+	Music Main (Pd)	: 1[EEE|EEC] 2[CEE|CEC|CEA] 3[see Chain A] 4[see Chain A] 5[CAE|CAC]
+	Sound Freq (C3)	: [See Chain A (same) section above]			
+
+
+	CHAIN B would be "played" in reverse order to CHAIN A ?
+	(For sake of "ease" I will initially use order sequence above. Currently in the algorthic composition
+	setting I have not factored in bonding relationships between ChainA and ChainB amino acids; for later...).
+
+
+
+	Main concern is :
+		1) Sequencing amino acids, (freq combos as "chordal" or "tonal" at least); 
+		2) FM synthesis of these note combonations, (not sure you could call the addative synthesis of
+		   the "notes" a "chord" as such; though the combinations are expected to be "harmonic" rather than
+		   atonal or dissonant.
+		3) A vaguely systematic harmonic composition :-)
+
