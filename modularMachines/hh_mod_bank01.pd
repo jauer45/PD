@@ -1,0 +1,33 @@
+#N canvas 506 191 392 187 10;
+#X obj 16 61 tempo;
+#X obj 67 78 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 67 94 t b;
+#X obj 67 112 hh_mod;
+#X obj 66 144 outlet~;
+#X obj 198 61 tempo;
+#X obj 249 78 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 249 94 t b;
+#X obj 249 112 hh_mod;
+#X obj 248 144 outlet~;
+#X obj 16 19 inlet;
+#X obj 53 19 inlet;
+#X obj 91 19 inlet;
+#X obj 198 18 inlet;
+#X obj 235 18 inlet;
+#X obj 273 18 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 1;
+#X connect 12 0 0 2;
+#X connect 13 0 5 0;
+#X connect 14 0 5 1;
+#X connect 15 0 5 2;

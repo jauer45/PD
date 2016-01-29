@@ -1,0 +1,14 @@
+#N canvas 0 0 257 228 10;
+#X obj 22 130 hho_mod_bank01;
+#X text 17 6 OPEN HiHat UNIT 1;
+#X obj 58 72 inlet;
+#X obj 96 72 inlet;
+#X obj 20 71 inlet;
+#X text 20 51 State;
+#X text 94 52 TSig;
+#X text 56 51 Tempo;
+#X obj 23 186 outlet~ hhoSND;
+#X connect 0 0 8 0;
+#X connect 2 0 0 1;
+#X connect 3 0 0 2;
+#X connect 4 0 0 0;

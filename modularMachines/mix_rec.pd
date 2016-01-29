@@ -1,0 +1,56 @@
+#N canvas 63 29 587 401 10;
+#X obj -1604 330 dac~;
+#X obj -1552 159 freeverb~;
+#X obj -1678 106 delay~ 100;
+#X text -1822 -47 MASTERING;
+#X obj -1819 -28 inlet~ kdSND;
+#X obj -1582 -28 inlet~ hhSND;
+#X obj -1490 271 rec_file;
+#X obj -1480 239 *~;
+#X obj -1449 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -1427 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -1402 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -1451 223 On;
+#X text -1404 222 Playbk;
+#X text -1467 173 REC;
+#X obj -1465 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text -1467 184 Record;
+#X text -1432 222 Stop;
+#X obj -1696 -28 inlet~ snSND;
+#X obj -1501 -6 inlet~ hhoSND;
+#X obj -1682 -6 inlet~ sn2SND;
+#X obj -1500 -29 inlet~ hh2SND;
+#X obj -1809 -7 inlet~ kd2SND;
+#X obj -1794 13 inlet~ kd3SND;
+#X obj -1779 34 inlet~ kd4SND;
+#X obj -1415 21 r~ basSND;
+#X connect 1 0 0 0;
+#X connect 1 0 7 0;
+#X connect 1 1 0 1;
+#X connect 1 1 7 0;
+#X connect 2 0 1 0;
+#X connect 2 0 1 1;
+#X connect 2 0 0 1;
+#X connect 2 0 0 0;
+#X connect 2 0 7 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 0 0;
+#X connect 6 1 0 1;
+#X connect 7 0 6 1;
+#X connect 8 0 6 2;
+#X connect 9 0 6 3;
+#X connect 10 0 6 4;
+#X connect 14 0 7 1;
+#X connect 17 0 2 0;
+#X connect 18 0 2 0;
+#X connect 19 0 2 0;
+#X connect 20 0 2 0;
+#X connect 21 0 2 0;
+#X connect 22 0 2 0;
+#X connect 23 0 2 0;
+#X connect 24 0 2 0;
