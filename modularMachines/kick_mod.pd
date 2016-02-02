@@ -8,7 +8,7 @@
 -1;
 #X obj 77 181 lop~ 200;
 #X msg 142 43 1 \, 0 190;
-#X obj 76 219 *~ 0.3;
+#X obj 76 219 *~ 0.2;
 #X connect 0 0 1 1;
 #X connect 1 0 6 0;
 #X connect 2 0 1 0;

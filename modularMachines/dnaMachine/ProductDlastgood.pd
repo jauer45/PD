@@ -1,0 +1,78 @@
+#N canvas 0 0 657 400 10;
+#X obj 252 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 322 31 Sync Tempo;
+#X msg 162 67 roomsize \$1;
+#X msg 162 122 damping \$1;
+#X obj 165 51 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 165 106 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 164 160 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 164 214 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 163 268 hsl 60 15 0 0.5 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 161 176 width \$1;
+#X msg 161 230 wet \$1;
+#X msg 160 284 dry \$1;
+#X text 248 32 Sequence X;
+#X text 160 32 Reverb CNTRL;
+#X obj 252 86 s~ dnaSND;
+#X text 28 14 INSULIN DNA SEQUENCE;
+#X obj 252 68 main;
+#X obj 60 55 knob 31 31 177 50 0 0 tDs tDsSy empty 0 -8 0 8 -262144
+-1 -1 3000 1;
+#N canvas 204 181 250 202 set_tempo 0;
+#X obj 40 67 ../tempo;
+#X obj 40 85 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 40 132 outlet;
+#X obj 22 21 inlet;
+#X obj 72 21 inlet;
+#X obj 121 21 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 0 2;
+#X restore 33 132 pd set_tempo;
+#X obj 60 92 tgl 15 0 oDs empty empty 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 76 92 hradio 15 1 0 4 sDs empty empty 0 -8 0 10 -262144 -1 -1
+0;
+#X text 55 35 TEMPO;
+#X floatatom 105 70 5 0 0 0 - tDs -;
+#X obj 33 150 s stmpo;
+#X obj 103 115 r sDs;
+#X obj 68 115 r tDs;
+#X obj 33 115 r oDs;
+#X obj 324 51 r stmpo;
+#X obj 162 85 s rvbctrlD;
+#X obj 162 140 s rvbctrlD;
+#X obj 161 194 s rvbctrlD;
+#X obj 161 248 s rvbctrlD;
+#X obj 160 302 s rvbctrlD;
+#X obj 160 325 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 160 341 bypass \$1;
+#X obj 160 359 s rvbctrlD;
+#X connect 0 0 16 0;
+#X connect 2 0 28 0;
+#X connect 3 0 29 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 9 0;
+#X connect 7 0 10 0;
+#X connect 8 0 11 0;
+#X connect 9 0 30 0;
+#X connect 10 0 31 0;
+#X connect 11 0 32 0;
+#X connect 16 0 14 0;
+#X connect 18 0 23 0;
+#X connect 24 0 18 2;
+#X connect 25 0 18 1;
+#X connect 26 0 18 0;
+#X connect 27 0 16 1;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;

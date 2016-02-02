@@ -13,7 +13,7 @@
 #X obj 128 188 lop~ 200;
 #X msg 257 54 1 \, 0 180;
 #X obj 96 38 inlet;
-#X obj 153 271 *~ 0.3;
+#X obj 153 271 *~ 0.2;
 #X connect 0 0 1 1;
 #X connect 1 0 8 0;
 #X connect 2 0 1 0;

@@ -11,7 +11,7 @@ Joseph Auer, 2015/2016
 [Dir Layout/Stuff]
 	Extract to where Pd will see/read files
 
- 	./rythmMachine/*
+ 	./modularMachines/*
 
 	- 38 files
 	- 044.7 KB total memory size
@@ -64,7 +64,14 @@ Joseph Auer, 2015/2016
 	to look at how dac~ will be affected/can be controlled for 1db
 	threshold clear state where addative sounds occur.   
 
-	- File recording/saving  
+	- File recording/saving
+
+	- Seperate fundemaental Abstracts from modularMachine Abstract (class)
+	  to have a engineering hierarchy structure.
+			
+		
+
+  
 
 [Code Layout]
 

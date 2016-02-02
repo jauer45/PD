@@ -1,0 +1,17 @@
+#N canvas 0 0 292 253 10;
+#X obj 66 69 inlet;
+#X obj 143 69 inlet;
+#X obj 105 69 inlet;
+#X text 65 52 State;
+#X text 142 51 TSig;
+#X text 105 51 Tempo;
+#X text 25 18 MAIN KICK UNIT 08X80;
+#X obj 27 69 inlet;
+#X text 28 52 Freq;
+#X obj 49 124 kick_mod_bank8X8;
+#X obj 48 177 outlet~ kd8X8ND;
+#X connect 0 0 9 1;
+#X connect 1 0 9 3;
+#X connect 2 0 9 2;
+#X connect 7 0 9 0;
+#X connect 9 0 10 0;

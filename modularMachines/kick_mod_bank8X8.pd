@@ -1,0 +1,19 @@
+#N canvas 515 96 355 254 10;
+#X obj 118 87 tempo;
+#X obj 169 104 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 6;
+#X obj 294 119 t b;
+#X obj 118 15 inlet;
+#X obj 155 15 inlet;
+#X obj 193 15 inlet;
+#X obj 225 191 kick_8X8_mod;
+#X obj 225 223 outlet~;
+#X obj 71 174 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 1;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 0 2;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;

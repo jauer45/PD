@@ -1,0 +1,46 @@
+#N canvas 47 5 450 336 10;
+#X obj 4 8 inlet;
+#X obj 94 129 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 119 291 outlet~;
+#X obj 161 169 osc~ 220;
+#X obj 62 46 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
+-1 4;
+#X obj 123 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 85 169 osc~ 130.81;
+#X obj 4 56 counter;
+#X obj 4 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 4 4
+;
+#X obj 61 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 10 169 osc~ 164.81;
+#X obj 73 234 *~ *;
+#X obj 94 261 *~ 0.4;
+#X obj 149 261 *~ 0.4;
+#X obj 168 233 *~ *;
+#X obj 4 85 mod 5;
+#X obj 61 70 select 0 1 2 3 4;
+#X obj 218 168 phasor~ 220;
+#X connect 0 0 8 0;
+#X connect 1 0 11 1;
+#X connect 3 0 11 0;
+#X connect 3 0 14 0;
+#X connect 4 0 16 0;
+#X connect 5 0 14 1;
+#X connect 6 0 14 0;
+#X connect 7 0 15 0;
+#X connect 8 0 7 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X connect 14 0 13 0;
+#X connect 15 0 4 0;
+#X connect 16 0 9 0;
+#X connect 16 1 1 0;
+#X connect 16 2 1 0;
+#X connect 16 3 5 0;
+#X connect 16 4 5 0;
+#X connect 17 0 14 0;
+#X connect 17 0 11 0;

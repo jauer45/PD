@@ -1,42 +1,52 @@
-#N canvas 63 29 587 401 10;
-#X obj -1604 330 dac~;
-#X obj -1552 159 freeverb~;
-#X obj -1678 106 delay~ 100;
-#X text -1822 -47 MASTERING;
-#X obj -1819 -28 inlet~ kdSND;
-#X obj -1582 -28 inlet~ hhSND;
-#X obj -1490 271 rec_file;
-#X obj -1480 239 *~;
-#X obj -1449 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#N canvas 334 75 578 411 10;
+#X obj -1581 345 dac~;
+#X obj -1536 168 freeverb~;
+#X obj -1655 121 delay~ 100;
+#X text -1799 -40 MASTERING;
+#X obj -1796 -21 inlet~ kdSND;
+#X obj -1559 -21 inlet~ hhSND;
+#X obj -1467 286 rec_file;
+#X obj -1457 254 *~;
+#X obj -1426 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -1427 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj -1404 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -1402 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj -1379 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text -1451 223 On;
-#X text -1404 222 Playbk;
-#X text -1467 173 REC;
-#X obj -1465 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X text -1428 238 On;
+#X text -1381 237 Playbk;
+#X text -1444 188 REC;
+#X obj -1442 216 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
-#X text -1467 184 Record;
-#X text -1432 222 Stop;
-#X obj -1696 -28 inlet~ snSND;
-#X obj -1501 -6 inlet~ hhoSND;
-#X obj -1682 -6 inlet~ sn2SND;
-#X obj -1500 -29 inlet~ hh2SND;
-#X obj -1809 -7 inlet~ kd2SND;
-#X obj -1794 13 inlet~ kd3SND;
-#X obj -1779 34 inlet~ kd4SND;
-#X obj -1415 21 r~ basSND;
-#X connect 1 0 0 0;
-#X connect 1 0 7 0;
-#X connect 1 1 0 1;
-#X connect 1 1 7 0;
+#X text -1444 199 Record;
+#X text -1409 237 Stop;
+#X obj -1673 -21 inlet~ snSND;
+#X obj -1478 1 inlet~ hhoSND;
+#X obj -1659 1 inlet~ sn2SND;
+#X obj -1477 -22 inlet~ hh2SND;
+#X obj -1786 0 inlet~ kd2SND;
+#X obj -1771 20 inlet~ kd3SND;
+#X obj -1756 41 inlet~ kd4SND;
+#X obj -1395 19 r~ basSND;
+#X obj -1536 118 r rvbctrlA;
+#X obj -1672 215 *~ 0.5;
+#X obj -1628 215 *~ 0.5;
+#X obj -1601 183 *~ 0.5;
+#X obj -1538 198 *~ 0.5;
+#X obj -1488 210 *~ 0.5;
+#X obj -1529 252 *~ 0.5;
+#X obj -1583 253 *~ 0.5;
+#X obj -1647 24 inlet~ sn8XND;
+#X obj -1738 60 inlet~ kd8XND;
+#X connect 1 0 29 0;
+#X connect 1 0 32 0;
+#X connect 1 1 30 0;
+#X connect 1 1 31 0;
 #X connect 2 0 1 0;
 #X connect 2 0 1 1;
-#X connect 2 0 0 1;
-#X connect 2 0 0 0;
-#X connect 2 0 7 0;
+#X connect 2 0 26 0;
+#X connect 2 0 27 0;
+#X connect 2 0 28 0;
 #X connect 4 0 2 0;
 #X connect 5 0 2 0;
 #X connect 6 0 0 0;
@@ -54,3 +64,13 @@
 #X connect 22 0 2 0;
 #X connect 23 0 2 0;
 #X connect 24 0 2 0;
+#X connect 25 0 1 0;
+#X connect 26 0 0 0;
+#X connect 27 0 0 1;
+#X connect 28 0 7 0;
+#X connect 29 0 7 0;
+#X connect 30 0 7 0;
+#X connect 31 0 0 1;
+#X connect 32 0 0 0;
+#X connect 33 0 2 0;
+#X connect 34 0 2 0;
