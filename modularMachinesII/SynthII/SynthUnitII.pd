@@ -1,0 +1,59 @@
+#N canvas 192 22 645 299 10;
+#X obj 159 -1 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 300 1;
+#X obj 300 -1 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 1600 1;
+#X obj 160 134 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 11400 1;
+#X obj 301 134 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 700 1;
+#X obj 481 46 line~;
+#X obj 567 17 keybd;
+#X obj 156 39 voiceOneII;
+#X obj 297 37 voiceTwoII;
+#X obj 157 174 voiceThreeII;
+#X obj 298 174 voiceFourII;
+#X obj 155 109 s~ syUnitOneII;
+#X obj 156 227 s~ syUnitThreeII;
+#X obj 297 112 s~ syUnitTwoII;
+#X obj 299 229 s~ syUnitFourII;
+#X obj 481 -21 knob 32 32 0 32 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 200 1;
+#X msg 481 15 \$0 1;
+#X floatatom 594 60 5 0 0 0 - - -;
+#X floatatom 567 90 5 0 0 0 - - -;
+#X obj 155 63 *~;
+#X obj 297 63 *~;
+#X obj 418 191 *~;
+#X obj 466 191 *~;
+#X obj 222 85 *~ 0.2;
+#X obj 306 208 *~ 0.2;
+#X connect 0 0 6 1;
+#X connect 1 0 7 1;
+#X connect 2 0 8 1;
+#X connect 3 0 9 1;
+#X connect 4 0 18 1;
+#X connect 4 0 19 1;
+#X connect 4 0 20 1;
+#X connect 4 0 21 1;
+#X connect 5 0 17 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 5 0 8 0;
+#X connect 5 0 9 0;
+#X connect 5 1 16 0;
+#X connect 5 1 4 0;
+#X connect 6 0 18 0;
+#X connect 7 0 19 0;
+#X connect 8 0 20 0;
+#X connect 9 0 21 0;
+#X connect 14 0 15 0;
+#X connect 15 0 4 0;
+#X connect 18 0 22 0;
+#X connect 19 0 22 0;
+#X connect 20 0 23 0;
+#X connect 21 0 23 0;
+#X connect 22 0 10 0;
+#X connect 22 0 12 0;
+#X connect 23 0 11 0;
+#X connect 23 0 13 0;

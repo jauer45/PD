@@ -1,0 +1,28 @@
+#N canvas 349 92 450 300 10;
+#X obj 92 159 knob 30 30 0 550 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 44 159 knob 30 30 0 550 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 92 67 expr 20000 / $f1;
+#X obj 196 158 knob 30 30 0 550 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 297 157 knob 30 30 0 650 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 196 84 expr 30000 / $f1;
+#X obj 297 101 expr 35000 / $f1;
+#X obj 44 220 outlet;
+#X obj 92 221 outlet;
+#X obj 196 220 outlet;
+#X obj 297 219 outlet;
+#X obj 44 29 inlet;
+#X connect 0 0 8 0;
+#X connect 1 0 7 0;
+#X connect 2 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 9 0;
+#X connect 4 0 10 0;
+#X connect 5 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 11 0 1 0;
+#X connect 11 0 2 0;
