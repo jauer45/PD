@@ -1,0 +1,86 @@
+#N canvas 105 45 450 300 10;
+#X obj 56 16 inlet;
+#X obj 56 142 knob 32 32 0 8 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 56 66 f;
+#X obj 56 91 counter;
+#X obj 56 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 56 115 mod 9;
+#X obj 56 186 / 9;
+#X obj 56 219 outlet;
+#X obj 110 17 inlet;
+#X obj 110 143 knob 32 32 0 8 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 110 67 f;
+#X obj 110 92 counter;
+#X obj 110 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 110 116 mod 9;
+#X obj 110 187 / 9;
+#X obj 110 220 outlet;
+#X obj 166 16 inlet;
+#X obj 166 142 knob 32 32 0 8 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 166 66 f;
+#X obj 166 91 counter;
+#X obj 166 47 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 166 115 mod 9;
+#X obj 166 186 / 9;
+#X obj 166 219 outlet;
+#X obj 218 17 inlet;
+#X obj 218 143 knob 32 32 0 8 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 218 67 f;
+#X obj 218 92 counter;
+#X obj 218 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 218 116 mod 9;
+#X obj 218 187 / 9;
+#X obj 218 220 outlet;
+#X obj 268 17 inlet;
+#X obj 268 143 knob 32 32 0 8 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 268 67 f;
+#X obj 268 92 counter;
+#X obj 268 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 268 116 mod 9;
+#X obj 268 187 / 9;
+#X obj 268 220 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 1 0;
+#X connect 6 0 7 0;
+#X connect 8 0 12 0;
+#X connect 9 0 14 0;
+#X connect 10 0 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 10 0;
+#X connect 13 0 9 0;
+#X connect 14 0 15 0;
+#X connect 16 0 20 0;
+#X connect 17 0 22 0;
+#X connect 18 0 19 0;
+#X connect 19 0 21 0;
+#X connect 20 0 18 0;
+#X connect 21 0 17 0;
+#X connect 22 0 23 0;
+#X connect 24 0 28 0;
+#X connect 25 0 30 0;
+#X connect 26 0 27 0;
+#X connect 27 0 29 0;
+#X connect 28 0 26 0;
+#X connect 29 0 25 0;
+#X connect 30 0 31 0;
+#X connect 32 0 36 0;
+#X connect 33 0 38 0;
+#X connect 34 0 35 0;
+#X connect 35 0 37 0;
+#X connect 36 0 34 0;
+#X connect 37 0 33 0;
+#X connect 38 0 39 0;

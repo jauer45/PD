@@ -1,4 +1,4 @@
-#N canvas 113 96 623 379 10;
+#N canvas 249 88 623 379 10;
 #X obj -1484 355 dac~;
 #X obj -1439 178 freeverb~;
 #X obj -1558 131 delay~ 100;
@@ -34,6 +34,13 @@
 #X obj -1413 49 r~ syUnitTwo;
 #X obj -1330 29 r~ syUnitThree;
 #X obj -1331 48 r~ syUnitFour;
+#X obj -1132 132 r~ smpls;
+#X obj -1135 165 r~ S1out;
+#X obj -1100 185 r~ S2out;
+#X obj -1071 205 r~ S3out;
+#X obj -1051 225 r~ S4out;
+#X obj -1044 264 r~ tThing;
+#X obj -1043 295 r~ tThing2;
 #X connect 1 0 11 0;
 #X connect 1 0 14 0;
 #X connect 1 1 12 0;
@@ -72,3 +79,10 @@
 #X connect 32 0 2 0;
 #X connect 33 0 2 0;
 #X connect 34 0 2 0;
+#X connect 35 0 2 0;
+#X connect 36 0 2 0;
+#X connect 37 0 2 0;
+#X connect 38 0 2 0;
+#X connect 39 0 2 0;
+#X connect 40 0 2 0;
+#X connect 41 0 2 0;

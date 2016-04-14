@@ -1,33 +1,35 @@
-#N canvas 192 22 645 299 10;
-#X obj 159 -1 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 300 1;
-#X obj 300 -1 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 1600 1;
-#X obj 160 134 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 11400 1;
-#X obj 301 134 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 700 1;
+#N canvas 193 22 644 389 10;
+#X obj 101 -3 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 1400 1;
+#X obj 242 -3 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 1400 1;
+#X obj 100 149 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 800 1;
+#X obj 241 149 hsl 128 15 150 1000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 600 1;
 #X obj 481 46 line~;
-#X obj 567 17 keybd;
-#X obj 156 39 voiceOneII;
-#X obj 297 37 voiceTwoII;
-#X obj 157 174 voiceThreeII;
-#X obj 298 174 voiceFourII;
-#X obj 155 109 s~ syUnitOneII;
-#X obj 156 227 s~ syUnitThreeII;
-#X obj 297 112 s~ syUnitTwoII;
-#X obj 299 229 s~ syUnitFourII;
+#X obj 567 20 keybd;
+#X obj 98 37 voiceOneII;
+#X obj 239 37 voiceTwoII;
+#X obj 97 189 voiceThreeII;
+#X obj 238 189 voiceFourII;
+#X obj 98 96 s~ syUnitOneII;
+#X obj 206 257 s~ syUnitThreeII;
+#X obj 260 96 s~ syUnitTwoII;
+#X obj 394 257 s~ syUnitFourII;
 #X obj 481 -21 knob 32 32 0 32 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 200 1;
+-1 -1 0 1;
 #X msg 481 15 \$0 1;
-#X floatatom 594 60 5 0 0 0 - - -;
-#X floatatom 567 90 5 0 0 0 - - -;
-#X obj 155 63 *~;
-#X obj 297 63 *~;
-#X obj 418 191 *~;
-#X obj 466 191 *~;
-#X obj 222 85 *~ 0.2;
-#X obj 306 208 *~ 0.2;
+#X floatatom 594 63 5 0 0 0 - - -;
+#X floatatom 567 93 5 0 0 0 - - -;
+#X obj 97 63 *~;
+#X obj 239 63 *~;
+#X obj 321 207 *~;
+#X obj 369 207 *~;
+#X obj 164 79 *~ 0.2;
+#X obj 320 240 *~ 0.2;
+#X obj 529 84 vsl 15 128 0 0.5 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8000 1;
 #X connect 0 0 6 1;
 #X connect 1 0 7 1;
 #X connect 2 0 8 1;
@@ -57,3 +59,5 @@
 #X connect 22 0 12 0;
 #X connect 23 0 11 0;
 #X connect 23 0 13 0;
+#X connect 24 0 23 1;
+#X connect 24 0 22 1;

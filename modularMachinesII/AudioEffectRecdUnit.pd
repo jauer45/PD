@@ -1,8 +1,8 @@
-#N canvas 0 343 810 110 10;
+#N canvas 104 302 810 203 10;
 #X obj 18 45 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X text 14 13 SOUND OUTPUT DEVICE;
-#N canvas 507 193 266 176 sndONOFF 0;
+#N canvas 569 284 266 176 sndONOFF 0;
 #X text 28 6 OFF;
 #X text 103 5 ON;
 #X obj 22 -73 inlet;
@@ -15,40 +15,81 @@
 #X restore 18 61 pd sndONOFF;
 #X text 36 29 On;
 #X text 15 29 Off;
-#X msg 190 59 roomsize \$1;
-#X msg 276 59 damping \$1;
-#X obj 193 43 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X msg 180 59 roomsize \$1;
+#X msg 266 59 damping \$1;
+#X obj 183 43 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3100 1;
+#X obj 269 45 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1400 1;
+#X obj 356 43 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 279 45 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 366 43 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 449 43 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 533 43 hsl 60 15 0 0.5 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X msg 363 59 width \$1;
-#X msg 446 59 wet \$1;
-#X msg 530 59 dry \$1;
-#X text 188 13 REVERB CNTRL;
-#X obj 530 76 s rvbctrlA;
-#X obj 683 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 439 43 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3300 1;
+#X obj 523 43 hsl 60 15 0 0.5 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1800 1;
+#X msg 353 59 width \$1;
+#X msg 436 59 wet \$1;
+#X msg 520 59 dry \$1;
+#X text 178 13 REVERB CNTRL;
+#X obj 520 76 s rvbctrlA;
+#X obj 673 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 719 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 709 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 755 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 745 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 681 24 On;
-#X text 752 23 Playbk;
-#X text 643 25 REC;
-#X obj 646 41 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 671 24 On;
+#X text 742 23 Playbk;
+#X text 633 25 REC;
+#X obj 636 41 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 715 23 Stop;
-#X text 643 12 RECORDING;
-#X obj 646 57 s rec;
-#X obj 683 57 s ron;
-#X obj 719 57 s stp;
-#X obj 755 57 s pbk;
+#X text 705 23 Stop;
+#X text 633 12 RECORDING;
+#X obj 636 57 s rec;
+#X obj 673 57 s ron;
+#X obj 709 57 s stp;
+#X obj 745 57 s pbk;
+#X obj 17 135 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
+-1 1;
+#N canvas 192 291 450 300 setGEM 1;
+#X obj 116 30 inlet load;
+#X obj 194 94 gemwin;
+#X obj 28 30 inlet set/del;
+#X obj 194 129 outlet;
+#X msg 194 55 dimen 400 300;
+#X obj 194 31 r lb;
+#X obj 196 155 loadbang;
+#X obj 196 180 s lb;
+#X obj 28 60 sel 0 1;
+#X msg 67 84 create;
+#X msg 65 109 destroy;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 8 0 10 0;
+#X connect 8 1 9 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X restore 17 151 pd setGEM;
+#X obj 68 135 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 183 131 hsl 128 15 0 4 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4200 1;
+#X floatatom 488 128 5 0 0 0 - - -;
+#X obj 467 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 319 129 5 -1 1 0 - - -;
+#X floatatom 354 129 5 -1 1 0 - - -;
+#X floatatom 389 129 5 -1 1 0 - - -;
+#X floatatom 424 128 5 -1 1 0 - - -;
+#X text 14 113 GEM SET;
+#X obj 365 157 GEMUnit/gemParticles;
+#X obj 530 128 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7103 1;
+#X floatatom 436 112 5 0 0 0 - - -;
 #X connect 0 0 2 0;
 #X connect 5 0 16 0;
 #X connect 6 0 16 0;
@@ -56,6 +97,7 @@
 #X connect 8 0 6 0;
 #X connect 9 0 12 0;
 #X connect 10 0 13 0;
+#X connect 10 0 43 0;
 #X connect 11 0 14 0;
 #X connect 12 0 16 0;
 #X connect 13 0 16 0;
@@ -64,3 +106,14 @@
 #X connect 18 0 28 0;
 #X connect 19 0 29 0;
 #X connect 23 0 26 0;
+#X connect 30 0 31 0;
+#X connect 32 0 31 1;
+#X connect 33 0 41 0;
+#X connect 34 0 41 6;
+#X connect 35 0 41 5;
+#X connect 36 0 41 1;
+#X connect 37 0 41 2;
+#X connect 38 0 41 3;
+#X connect 39 0 41 4;
+#X connect 42 0 41 7;
+#X connect 43 0 42 0;

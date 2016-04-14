@@ -1,7 +1,7 @@
-#N canvas 0 0 649 367 10;
-#X obj 16 82 tgl 15 0 oKd empty empty 17 7 0 10 -262144 -1 -1 0 1;
+#N canvas 399 27 649 367 10;
+#X obj 16 82 tgl 15 0 oKd empty empty 17 7 0 10 -262144 -1 -1 1 1;
 #X obj 18 43 knob 31 31 177 50 0 0 tKd empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 2300 1;
 #X floatatom 60 63 5 0 0 0 - tKd -;
 #X obj 32 82 hradio 15 1 0 4 sKd empty empty 0 -8 0 10 -262144 -1 -1
 0;
@@ -13,16 +13,16 @@
 #X obj 107 83 tgl 15 0 oK8X empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 110 44 knob 31 31 177 50 0 0 tK8X empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 2400 1;
 #X floatatom 151 64 5 0 0 0 - tK8X -;
 #X obj 123 83 hradio 15 1 0 4 sK8X empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 2;
 #X obj 123 100 hradio 15 1 0 4 fK8X empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X obj 13 190 tgl 15 0 o8Xn empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 15 151 knob 31 31 177 50 0 0 t8Xn empty empty 0 -8 0 8 -262144
--1 -1 3000 1;
+-1 -1 0 1;
 #X floatatom 56 171 5 0 0 0 - t8Xn -;
 #X obj 29 190 hradio 15 1 0 4 s8Xn empty empty 0 -8 0 10 -262144 -1
 -1 0;
@@ -32,10 +32,31 @@
 #X obj 12 303 tgl 15 0 oHho empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 14 264 knob 31 31 177 50 0 0 tHho empty empty 0 -8 0 8 -262144
--1 -1 3000 1;
+-1 -1 0 1;
 #X floatatom 55 284 5 0 0 0 - tHho -;
 #X obj 28 303 hradio 15 1 0 4 sHho empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X obj 28 321 hradio 15 1 0 4 fHho empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X text 12 243 OPEN HI HAT BANK;
+#X obj 114 305 hsl 128 15 0 4 0 0 empty fKd empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 419 302 5 0 0 0 - - -;
+#X obj 398 302 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 250 303 5 -1 1 0 - - -;
+#X floatatom 285 303 5 -1 1 0 - - -;
+#X floatatom 320 303 5 -1 1 0 - - -;
+#X floatatom 355 302 5 -1 1 0 - - -;
+#X obj 461 302 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1400 1;
+#X obj 296 331 ../GEMUnit/gemParticles;
+#X text 111 281 GEM SYNC (VISUALS);
+#X connect 25 0 33 0;
+#X connect 26 0 33 6;
+#X connect 27 0 33 5;
+#X connect 28 0 33 1;
+#X connect 29 0 33 2;
+#X connect 30 0 33 3;
+#X connect 31 0 33 4;
+#X connect 32 0 33 7;
