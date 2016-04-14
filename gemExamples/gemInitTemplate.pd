@@ -1,0 +1,14 @@
+#N canvas 147 101 631 334 10;
+#X obj 190 175 gemwin;
+#X text 189 191 Handle to a Display Context;
+#X msg 193 64 Create;
+#X msg 213 103 Destroy;
+#X msg 233 132 0;
+#X msg 278 151 1;
+#X text 196 45 Create the GEM window;
+#X text 211 86 Close down and purge the GEM window;
+#X text 275 134 Display something in the create(d) GEM window;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;

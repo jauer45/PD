@@ -1,0 +1,44 @@
+#N canvas 69 96 450 300 10;
+#X msg 25 21 create;
+#X msg 32 47 destroy;
+#X obj 68 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 27 130 gemwin;
+#X obj 109 129 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 109 156 gemhead;
+#X obj 109 260 rectangle 4 3;
+#X obj 109 222 pix_texture;
+#X obj 284 129 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 284 157 gemhead;
+#X obj 284 258 rectangle 4 3;
+#X obj 284 220 pix_texture;
+#X obj 215 16 key;
+#X floatatom 215 43 5 0 0 0 - - -;
+#X obj 175 74 sel 97;
+#X obj 230 74 sel 98;
+#X msg 175 98 0;
+#X msg 230 98 0;
+#X obj 109 189 pix_image rn028_02_01.jpg;
+#X obj 284 188 pix_image rn028_02_02.jpg;
+#X connect 0 0 3 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 18 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 19 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 4 0;
+#X connect 14 0 16 0;
+#X connect 15 0 8 0;
+#X connect 15 0 17 0;
+#X connect 16 0 8 0;
+#X connect 17 0 4 0;
+#X connect 18 0 7 0;
+#X connect 19 0 11 0;

@@ -1,0 +1,17 @@
+#N canvas 147 101 631 334 10;
+#X obj 54 160 gemwin;
+#X msg 57 49 Create;
+#X msg 77 88 Destroy;
+#X msg 97 117 0;
+#X msg 142 136 1;
+#X text 60 30;
+#X text 75 71;
+#X text 139 119;
+#X text 53 176;
+#X obj 262 57 gemhead;
+#X obj 262 151 square;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 9 0 10 0;
