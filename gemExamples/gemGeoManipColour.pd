@@ -1,0 +1,34 @@
+#N canvas 800 173 450 300 10;
+#X obj 166 104 gemhead;
+#X obj 168 194 triangle;
+#X obj 166 159 colorRGB;
+#X obj 177 12 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
+-1 -1 11700 1;
+#X floatatom 210 52 5 0 0 0 - - -;
+#X obj 315 11 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4034
+-1 -1 3100 1;
+#X obj 456 11 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4160
+-1 -1 1000 1;
+#X obj 42 87 gemwin;
+#X msg 44 32 create;
+#X msg 94 33 destroy;
+#X obj 23 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 241 158 color;
+#X obj 241 104 pack f f f;
+#X obj 312 53 trigger b f;
+#X obj 453 54 trigger b f;
+#X connect 0 0 11 0;
+#X connect 3 0 4 0;
+#X connect 3 0 12 0;
+#X connect 5 0 13 0;
+#X connect 6 0 14 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;
+#X connect 11 0 1 0;
+#X connect 12 0 11 1;
+#X connect 13 0 12 0;
+#X connect 13 1 12 1;
+#X connect 14 0 12 0;
+#X connect 14 1 12 2;
