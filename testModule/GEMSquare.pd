@@ -1,0 +1,16 @@
+#N canvas 505 209 450 300 10;
+#X obj 95 55 rotateXYZ;
+#X obj 94 132 translateXYZ;
+#X obj 94 196 square;
+#X obj 94 166 color;
+#X obj 181 28 inlet X;
+#X obj 231 27 inlet Y;
+#X obj 95 27 inlet GEMobj;
+#X obj 285 27 inlet color;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 2;
+#X connect 6 0 0 0;
+#X connect 7 0 3 1;
