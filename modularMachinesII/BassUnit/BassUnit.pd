@@ -1,26 +1,26 @@
-#N canvas 344 68 686 401 10;
+#N canvas 427 81 686 401 10;
 #X obj 19 -6 knob 31 31 177 50 0 0 tBs tBsSy empty 0 -8 0 8 -262144
--1 -1 1900 1;
+-1 -1 3000 1;
 #X text 464 0 Attk;
 #X obj 468 22 knob 30 30 0 300 0 0 attk empty empty 0 -8 0 8 -262144
--1 -1 300 1;
+-1 -1 2600 1;
 #X text 507 -1 Decay;
 #X obj 511 22 knob 30 30 0 3000 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 800 1;
 #X text 432 -27 WAVE TYPE;
 #X obj 553 22 knob 30 30 0 7000 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 1000 1;
 #X obj 595 22 knob 30 30 0 3000 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 2000 1;
 #X text 592 0 Freq;
 #X text 549 0 Range;
-#X obj 122 9 tgl 15 0 wsn1 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 122 9 tgl 15 0 wsn1 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 144 9 tgl 15 0 wsw1 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 167 9 tgl 15 0 wtr1 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 190 9 tgl 15 0 wsq1 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 190 9 tgl 15 0 wsq1 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X text 119 -8 Sin;
 #X text 167 -8 Tri;
@@ -30,32 +30,34 @@
 #X text 423 95 VCO;
 #X text 553 94 LFO;
 #X obj 595 138 knob 30 30 0 10 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 1600 1;
 #X obj 557 138 knob 30 30 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 800 1;
 #X obj 427 138 knob 30 30 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 2100 1;
 #X obj 501 138 knob 30 30 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 2300 1;
 #X obj 464 138 knob 30 30 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 1200 1;
 #X text 424 107 Pitch;
 #X text 424 119 1;
 #X text 464 117 2;
 #X text 500 116 3;
 #X text 554 116 Rate;
 #X obj 566 256 knob 32 32 0 1 0 0 bVol empty empty 0 -8 0 8 -262144
--1 -1 900 1;
+-1 -1 1200 1;
 #X text 563 235 VOL;
-#N canvas 204 181 250 202 set_tempo 0;
+#N canvas 204 181 250 145 set_tempo 0;
 #X obj 40 67 ../tempo;
 #X obj 40 85 hradio 10 1 0 16 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+-1 12;
 #X obj 40 132 outlet;
 #X obj 22 21 inlet;
 #X obj 72 21 inlet;
 #X obj 121 21 inlet;
+#X obj 85 132 outlet;
 #X connect 0 0 1 0;
+#X connect 0 1 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
 #X connect 4 0 0 1;
@@ -64,58 +66,57 @@
 #X obj 426 216 setWaveformDynamics;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array mel01 16 float 3;
-#A 0 -0.300002 -0.0250015 0.8 -0.0250015 -1.41189e-006 0.0249986 0.825
-0.65 -1.49384e-006 0.775 0.65 0.474999 0.399999 0.249999 0.124999 -0.150002
-;
+#A 0 -0.300002 0.325 0.325 0.425 0.425 0.425 0.425 0.425 0.425 0.4
+0.325 0.299999 0.274999 0.249999 0.224999 0.224999;
 #X coords 0 1 16 -1 140 80 1 0 0;
 #X restore 119 93 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array mel02 16 float 3;
-#A 0 -0.125004 -0.125004 0.674998 -0.125004 -0.100004 -0.0250035 0.0999967
-0.724998 0.599998 0.474997 0.399997 0.324997 0.149997 -3.5651e-006
--0.200004 -0.575005;
+#A 0 0.299997 0.474997 0.524997 0.524997 0.524997 0.499997 0.449997
+0.424997 0.424997 0.924998 0.324997 0.274997 0.249997 0.174997 0.0249964
+-0.150004;
 #X coords 0 1 16 -1 140 80 1 0 0;
 #X restore 261 93 graph;
-#X obj 19 31 tgl 15 0 oBs empty empty 17 7 0 10 -262144 -1 -1 1 1;
+#X obj 19 31 tgl 15 0 oBs empty empty 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 35 31 hradio 15 1 0 4 sBs empty empty 0 -8 0 10 -262144 -1 -1
-1;
+3;
 #X text 14 -26 TEMPO;
 #X obj 9 235 melodyShaper;
 #X obj 501 171 pulseWidthMix;
 #X obj 425 55 wavAttDecFM;
 #X floatatom 64 9 5 0 0 0 - tBs -;
-#X obj 217 9 tgl 15 0 wsn2 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 217 9 tgl 15 0 wsn2 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 239 9 tgl 15 0 wsw2 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 262 9 tgl 15 0 wtr2 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 285 9 tgl 15 0 wsq2 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 285 9 tgl 15 0 wsq2 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X text 214 -8 Sin;
 #X text 262 -8 Tri;
 #X text 236 -9 Saw;
 #X text 283 -9 Sqr;
-#X obj 312 9 tgl 15 0 wsn3 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 312 9 tgl 15 0 wsn3 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 334 9 tgl 15 0 wsw3 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 357 9 tgl 15 0 wtr3 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 380 9 tgl 15 0 wsq3 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 380 9 tgl 15 0 wsq3 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X text 309 -8 Sin;
 #X text 357 -8 Tri;
 #X text 331 -9 Saw;
 #X text 378 -9 Sqr;
 #X obj -8 88 s seqr;
-#X obj 123 44 tgl 15 0 wsn4 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 123 44 tgl 15 0 wsn4 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 145 44 tgl 15 0 wsw4 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 168 44 tgl 15 0 wtr4 empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 191 44 tgl 15 0 wsq4 empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 191 44 tgl 15 0 wsq4 empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X text 120 27 Sin;
 #X text 168 27 Tri;
@@ -131,13 +132,13 @@
 #X obj 62 54 r sBs;
 #X obj -8 54 r oBs;
 #X obj 425 291 setBassMix;
-#X obj 308 58 tgl 15 0 siMldy empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 308 58 tgl 15 0 siMldy empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 330 58 tgl 15 0 saMldy empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 353 58 tgl 15 0 trMldy empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 353 58 tgl 15 0 trMldy empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 376 58 tgl 15 0 sqMldy empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 376 58 tgl 15 0 sqMldy empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 305 41 Sin;
 #X text 349 40 Tri;
@@ -154,14 +155,14 @@
 #X obj 175 218 tabread mel03;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array mel03 16 float 3;
-#A 0 -0.224991 -0.174991 -0.149991 0.700002 -0.724986 -0.124991 0.475004
-0.075007 0.700002 0.675002 0.625003 0.500004 0.400005 0.300005 0.125007
--0.174991;
+#A 0 0.750002 0.750002 0.725002 0.675003 0.575004 0.300006 0.150007
+0.0250078 0.0250078 0.0250078 0.100007 0.200006 0.250006 0.400005 0.525004
+0.775002;
 #X coords 0 1 16 -1 140 80 1 0 0;
 #X restore 260 193 graph;
 #X obj 175 201 r seqr;
 #X obj 12 333 hsl 128 15 0 4 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1314 1;
+-1 -1 11386 1;
 #X floatatom 317 330 5 0 0 0 - - -;
 #X obj 296 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -170,10 +171,11 @@
 #X floatatom 218 331 5 -1 1 0 - - -;
 #X floatatom 253 330 5 -1 1 0 - - -;
 #X obj 359 330 hsl 128 15 0 1 0 0 empty bVol empty -2 -8 0 10 -262144
--1 -1 3687 1;
+-1 -1 11100 1;
 #X obj 179 359 ../GEMUnit/gemParticles;
 #X floatatom 9 298 5 0 0 0 - attk -;
 #X obj 9 315 expr $f1 / 75;
+#X obj 61 89 s tmpr;
 #X connect 2 0 42 1;
 #X connect 4 0 42 2;
 #X connect 6 0 42 3;
@@ -185,6 +187,7 @@
 #X connect 25 0 41 1;
 #X connect 31 0 78 4;
 #X connect 33 0 60 0;
+#X connect 33 1 109 0;
 #X connect 34 0 78 0;
 #X connect 40 0 74 0;
 #X connect 41 0 89 0;
