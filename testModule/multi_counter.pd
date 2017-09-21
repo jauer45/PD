@@ -1,0 +1,12 @@
+#N canvas 832 153 450 300 10;
+#X obj 136 136 counter;
+#X obj 298 32 inlet limit;
+#X obj 136 217 outlet;
+#X obj 215 59 f;
+#X obj 215 34 inlet num;
+#X obj 137 35 inlet opt;
+#X connect 0 0 2 0;
+#X connect 1 0 0 4;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
