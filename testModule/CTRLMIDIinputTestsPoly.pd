@@ -1,0 +1,13 @@
+#N canvas 742 239 450 300 10;
+#X obj 56 30 midiin;
+#X floatatom 55 206 5 0 0 0 - - -;
+#X floatatom 89 71 5 0 0 0 - - -;
+#X obj 56 112 midiparse;
+#X obj 55 170 unpack f f;
+#X floatatom 112 207 5 0 0 0 - - -;
+#X obj 205 198 poly;
+#X connect 0 0 3 0;
+#X connect 0 1 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 1 5 0;
