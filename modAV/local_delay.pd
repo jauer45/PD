@@ -1,0 +1,22 @@
+#N canvas 795 385 450 300 10;
+#X obj 23 70 inlet~;
+#X obj 208 21 inlet;
+#X obj 23 120 delwrite~ \$0-dline 2000;
+#X floatatom 208 46 5 0 0 0 - - -;
+#X obj 208 69 delread~ \$0-dline 500;
+#X obj 208 100 outlet~;
+#X obj 65 23 hsl 120 12 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4400 1;
+#X obj 65 39 hsl 120 12 0 2000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1900 1;
+#X obj 23 96 *~;
+#X text 24 37 delay;
+#X text 84 76;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 8 1;
+#X connect 7 0 4 0;
+#X connect 8 0 2 0;
+#X coords 0 -1 1 1 170 40 1 20 20;

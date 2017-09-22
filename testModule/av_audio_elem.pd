@@ -1,6 +1,6 @@
 #N canvas 436 250 515 437 10;
 #X obj 28 55 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X text 24 23 SOUND OUTPUT DEVICE;
 #N canvas 569 284 266 119 sndONOFF 0;
 #X text 28 6 OFF;
@@ -16,7 +16,7 @@
 #X text 46 39 On;
 #X text 25 39 Off;
 #X obj 27 121 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #N canvas 192 291 450 300 setGEM 0;
 #X obj 116 30 inlet load;
 #X obj 194 94 gemwin;
@@ -40,7 +40,7 @@
 #X connect 9 0 1 0;
 #X connect 10 0 1 0;
 #X restore 27 137 pd setGEM;
-#X obj 78 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 78 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 24 99 GEM SET;
 #X obj 346 163 line~;
@@ -66,13 +66,14 @@
 #X obj 335 53 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 335 73 metro 210;
-#X obj 360 38 knob 32 32 200 300 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 3100 1;
+#X obj 360 38 knob 32 32 100 300 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
 #X msg 247 228 -1 1 \$1;
 #X msg 183 135 \$1 1 1;
 #X msg 222 208 \$1 0 0;
 #X obj 222 186 expr 1 - $f1;
 #X msg 346 145 1 \, 0 120;
+#X floatatom 396 73 5 0 0 0 - - -;
 #X connect 0 0 2 0;
 #X connect 5 0 6 0;
 #X connect 7 0 6 1;
@@ -106,6 +107,7 @@
 #X connect 28 0 29 0;
 #X connect 29 0 11 0;
 #X connect 30 0 29 1;
+#X connect 30 0 36 0;
 #X connect 31 0 24 4;
 #X connect 32 0 24 1;
 #X connect 33 0 24 3;
