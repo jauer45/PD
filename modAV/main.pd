@@ -1,4 +1,4 @@
-#N canvas 23 52 806 454 10;
+#N canvas 422 28 806 454 10;
 #X obj 9 -88 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
 -1 1;
 #X text 6 -120 SOUND OUTPUT DEVICE;
@@ -73,6 +73,10 @@
 #X obj 682 -103 kd808A;
 #X obj 742 -42 connkb;
 #X obj 682 -42 dac~;
+#X obj 262 183 mixr;
+#X obj 685 69 hhMOD;
+#X obj 685 143 dac~;
+#X obj 741 136 connhh;
 #X connect 0 0 2 0;
 #X connect 5 0 6 0;
 #X connect 7 0 6 1;
@@ -113,3 +117,7 @@
 #X connect 36 0 38 1;
 #X connect 36 1 37 0;
 #X connect 36 2 37 1;
+#X connect 40 0 41 0;
+#X connect 40 0 41 1;
+#X connect 40 1 42 0;
+#X connect 40 2 42 1;
