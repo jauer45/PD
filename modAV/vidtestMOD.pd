@@ -1,0 +1,48 @@
+#N canvas 709 412 517 294 10;
+#X obj 9 -60 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
+-1 1;
+#N canvas 192 291 450 300 setGEM 0;
+#X obj 116 30 inlet load;
+#X obj 194 94 gemwin;
+#X obj 28 30 inlet set/del;
+#X obj 194 129 outlet;
+#X obj 194 31 r lb;
+#X obj 196 155 loadbang;
+#X obj 196 180 s lb;
+#X obj 28 60 sel 0 1;
+#X msg 67 84 create;
+#X msg 65 109 destroy;
+#X msg 194 55 dimen 500 300;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 7 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 7 0 9 0;
+#X connect 7 1 8 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X restore 9 -44 pd setGEM;
+#X obj 52 -60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 7 -81 GEM SET;
+#X obj 235 29 connvid;
+#X obj 235 -48 kd808A;
+#X obj 68 -60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 68 -44 lighting \$1;
+#X obj 99 53 expr $f1 + 1;
+#X obj 99 73 % 360;
+#X obj 99 32 f;
+#X obj 99 104 connvidmod;
+#X connect 0 0 1 0;
+#X connect 2 0 1 1;
+#X connect 5 1 10 0;
+#X connect 5 2 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 1;
+#X connect 8 0 9 0;
+#X connect 8 0 10 1;
+#X connect 9 0 11 0;
+#X connect 10 0 8 0;

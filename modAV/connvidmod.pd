@@ -1,0 +1,58 @@
+#N canvas 123 192 389 470 10;
+#X obj 78 21 hsl 20 14 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 75 58 1 -1 1 \$1;
+#X obj 180 12 knob 20 20 -10 10 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 207 12 knob 20 20 -10 10 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 234 12 knob 20 20 -10 10 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 48 122 rotateXYZ;
+#X obj 48 149 translateXYZ;
+#X obj 48 89 color;
+#X obj 48 213 alpha;
+#X msg 67 271 0 2 0;
+#X msg 78 290 2 1 0;
+#X obj 48 416 polygon 5;
+#X msg 88 308 1 -1 0;
+#X msg 99 328 -1 -1 0;
+#X msg 109 347 -2 1 0;
+#X obj 143 13 knob 20 20 -35 10 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 117 13 knob 20 20 0 359 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 274 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 291 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 7 57 gemhead 20;
+#X obj 322 16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 3 9 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 7 1;
+#X connect 2 0 6 1;
+#X connect 3 0 6 2;
+#X connect 4 0 6 3;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 5 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 1;
+#X connect 10 0 11 2;
+#X connect 12 0 11 3;
+#X connect 13 0 11 4;
+#X connect 14 0 11 5;
+#X connect 15 0 5 2;
+#X connect 16 0 5 1;
+#X connect 17 0 8 0;
+#X connect 18 0 8 1;
+#X connect 19 0 7 0;
+#X connect 20 0 9 0;
+#X connect 20 0 10 0;
+#X connect 20 0 12 0;
+#X connect 20 0 13 0;
+#X connect 20 0 14 0;
+#X connect 21 0 16 0;
+#X coords 0 -1 1 1 300 30 1 40 8;
