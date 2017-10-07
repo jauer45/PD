@@ -1,6 +1,6 @@
 #N canvas 682 42 544 616 10;
 #X obj 13 -37 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #N canvas 192 291 450 300 setGEM 0;
 #X obj 116 30 inlet load;
 #X obj 194 94 gemwin;
@@ -24,10 +24,10 @@
 #X connect 9 0 1 0;
 #X connect 10 0 1 0;
 #X restore 13 -21 pd setGEM;
-#X obj 56 -37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 56 -37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 11 -58 GEM SET;
-#X obj 72 -37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 72 -37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 72 -21 lighting \$1;
 #X obj 91 -1 kd808A;
@@ -38,11 +38,7 @@
 #X obj 92 91 expr $f1 + 1;
 #X obj 92 73 f;
 #X obj 92 109 % 20;
-#X obj 7 214 connvidmodA;
-#X obj 9 277 connvidmodA;
-#X obj 9 337 connvidmodA;
-#X obj 10 400 connvidmodA;
-#X obj 11 462 connvidmodA;
+#X obj 9 224 connvidmodV;
 #X connect 0 0 1 0;
 #X connect 2 0 1 1;
 #X connect 4 0 5 0;
@@ -53,35 +49,15 @@
 #X connect 8 0 10 1;
 #X connect 9 0 7 1;
 #X connect 9 0 7 4;
-#X connect 9 0 14 1;
-#X connect 9 0 15 1;
 #X connect 9 0 7 2;
+#X connect 9 0 14 1;
 #X connect 9 0 14 2;
 #X connect 9 0 14 4;
-#X connect 9 0 15 2;
-#X connect 9 0 15 4;
-#X connect 9 0 16 1;
-#X connect 9 0 17 1;
-#X connect 9 0 16 2;
-#X connect 9 0 17 2;
-#X connect 9 0 16 4;
-#X connect 9 0 17 4;
-#X connect 9 0 18 1;
-#X connect 9 0 18 2;
-#X connect 9 0 18 4;
 #X connect 10 0 8 0;
 #X connect 11 0 12 1;
 #X connect 11 0 13 0;
 #X connect 12 0 11 0;
 #X connect 13 0 7 0;
-#X connect 13 0 14 0;
-#X connect 13 0 15 0;
 #X connect 13 0 7 3;
+#X connect 13 0 14 0;
 #X connect 13 0 14 3;
-#X connect 13 0 15 3;
-#X connect 13 0 16 0;
-#X connect 13 0 17 0;
-#X connect 13 0 16 3;
-#X connect 13 0 17 3;
-#X connect 13 0 18 0;
-#X connect 13 0 18 3;
