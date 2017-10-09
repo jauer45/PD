@@ -1,0 +1,11 @@
+#N canvas 74 286 527 300 10;
+#X obj 16 130 VidTextureColourTest;
+#X obj 316 99 vidtxtrColrUI;
+#X obj 316 75 metro 200;
+#X obj 316 55 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 345 54 5 0 0 0 - - -;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 1;

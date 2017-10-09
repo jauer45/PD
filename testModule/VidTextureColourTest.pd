@@ -1,0 +1,187 @@
+#N canvas 519 59 652 638 10;
+#X obj 38 190 pix_video;
+#X obj 38 220 pix_blob 4;
+#X obj 38 247 pix_film;
+#X obj 103 248 f;
+#X obj 22 275 pix_contrast;
+#X obj 239 50 vsl 15 40 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 260 50 vsl 15 40 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 335 202 render_trigger;
+#X msg 430 236 snap;
+#X obj 38 305 translateXYZ;
+#X obj 38 385 rotateXYZ;
+#X obj 291 77 hsl 40 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 335 270 pix_snap 0 0 512 512;
+#X obj 335 309 pix_texture;
+#X obj 335 365 translateXYZ;
+#X obj 335 407 rotateXYZ;
+#X obj 335 493 rectangle 4 3;
+#X obj 373 472 * 4;
+#X obj 409 471 * 3;
+#X obj 343 62 hsl 40 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 426 63 hsl 40 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 335 528 spigot;
+#X obj 453 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 287 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 53 335 metro 10;
+#X obj 55 358 f;
+#X obj 84 358 + 1;
+#X obj 265 174 metro;
+#X floatatom 388 80 5 0 0 0 - - -;
+#X obj 369 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 267 196 f;
+#X obj 269 227 counter;
+#X obj 269 254 % 360;
+#X obj 39 515 pix_texture;
+#X obj 39 555 cube 0.34;
+#X obj 339 23 hsl 128 15 0 30 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 336 149 set \$1;
+#X floatatom 471 23 5 0 0 0 - - -;
+#X obj 339 42 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 439 205 set \$1;
+#X obj 363 235 gemhead;
+#X obj 38 106 gemhead 5;
+#X obj 334 553 cube 5;
+#X floatatom 471 42 5 0 0 0 - - -;
+#X floatatom 471 61 5 0 0 0 - - -;
+#X floatatom 389 61 5 0 0 0 - - -;
+#X obj 39 128 repeat 20;
+#X obj 39 149 t a b;
+#X obj 60 170 f;
+#X obj 86 170 + 1;
+#X obj 111 170 % 20;
+#X obj 132 52 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 157 51 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 181 51 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 205 51 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 28 63 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#N canvas 192 291 450 300 setGEM 0;
+#X obj 116 30 inlet load;
+#X obj 194 94 gemwin;
+#X obj 28 30 inlet set/del;
+#X obj 194 129 outlet;
+#X obj 194 31 r lb;
+#X obj 196 155 loadbang;
+#X obj 196 180 s lb;
+#X obj 28 60 sel 0 1;
+#X msg 67 84 create;
+#X msg 65 109 destroy;
+#X msg 194 55 dimen 500 300;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 7 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 7 0 9 0;
+#X connect 7 1 8 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X restore 28 79 pd setGEM;
+#X obj 71 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 26 47 GEM SET;
+#X obj 87 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 87 79 lighting \$1;
+#X obj 132 1 inlet;
+#X floatatom 111 191 5 0 0 0 - - -;
+#X obj 335 173 gemhead;
+#X obj 39 411 separator;
+#X obj 39 452 color;
+#X obj 52 486 alpha;
+#X msg 79 451 auto \$1;
+#X obj 193 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 211 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 190 1 inlet vidtxtcolUI;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 2 3 0;
+#X connect 3 0 2 1;
+#X connect 4 0 9 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 2;
+#X connect 7 0 12 0;
+#X connect 7 2 8 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 10 0 64 0;
+#X connect 11 0 34 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 21 0;
+#X connect 17 0 16 1;
+#X connect 18 0 16 2;
+#X connect 19 0 15 3;
+#X connect 19 0 45 0;
+#X connect 20 0 17 0;
+#X connect 20 0 18 0;
+#X connect 20 0 44 0;
+#X connect 21 0 42 0;
+#X connect 22 0 21 1;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 25 0 10 1;
+#X connect 25 0 10 2;
+#X connect 26 0 25 1;
+#X connect 27 0 30 0;
+#X connect 28 0 27 1;
+#X connect 29 0 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 15 1;
+#X connect 32 0 15 2;
+#X connect 32 0 10 3;
+#X connect 33 0 34 0;
+#X connect 35 0 36 0;
+#X connect 35 0 37 0;
+#X connect 36 0 63 0;
+#X connect 38 0 39 0;
+#X connect 38 0 43 0;
+#X connect 39 0 40 0;
+#X connect 40 0 12 0;
+#X connect 41 0 46 0;
+#X connect 46 0 47 0;
+#X connect 47 0 0 0;
+#X connect 47 1 48 0;
+#X connect 48 0 49 0;
+#X connect 49 0 48 1;
+#X connect 49 0 50 0;
+#X connect 50 0 62 0;
+#X connect 51 0 46 1;
+#X connect 51 0 50 1;
+#X connect 55 0 56 0;
+#X connect 57 0 56 1;
+#X connect 59 0 60 0;
+#X connect 60 0 56 1;
+#X connect 61 0 51 0;
+#X connect 63 0 7 0;
+#X connect 64 0 65 0;
+#X connect 65 0 66 0;
+#X connect 66 0 33 0;
+#X connect 67 0 66 0;
+#X connect 68 0 67 0;
+#X connect 69 0 66 1;
+#X connect 70 0 65 1;
+#X coords 0 -1 1 1 500 80 1 20 20;
