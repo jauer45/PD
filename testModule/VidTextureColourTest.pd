@@ -5,15 +5,15 @@
 #X obj 103 248 f;
 #X obj 22 275 pix_contrast;
 #X obj 239 50 vsl 15 40 0 10 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 500 1;
 #X obj 260 50 vsl 15 40 0 10 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3700 1;
 #X obj 335 202 render_trigger;
 #X msg 430 236 snap;
 #X obj 38 305 translateXYZ;
 #X obj 38 385 rotateXYZ;
-#X obj 291 77 hsl 40 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 291 77 hsl 40 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3900 1;
 #X obj 335 270 pix_snap 0 0 512 512;
 #X obj 335 309 pix_texture;
 #X obj 335 365 translateXYZ;
@@ -24,18 +24,18 @@
 #X obj 343 62 hsl 40 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 426 63 hsl 40 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 3900 1;
 #X obj 335 528 spigot;
-#X obj 453 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 453 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 287 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 287 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 53 335 metro 10;
 #X obj 55 358 f;
 #X obj 84 358 + 1;
 #X obj 265 174 metro;
 #X floatatom 388 80 5 0 0 0 - - -;
-#X obj 369 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 369 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 267 196 f;
 #X obj 269 227 counter;
@@ -43,11 +43,11 @@
 #X obj 39 515 pix_texture;
 #X obj 39 555 cube 0.34;
 #X obj 339 23 hsl 128 15 0 30 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X msg 336 149 set \$1;
 #X floatatom 471 23 5 0 0 0 - - -;
 #X obj 339 42 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X msg 439 205 set \$1;
 #X obj 363 235 gemhead;
 #X obj 38 106 gemhead 5;
@@ -61,7 +61,7 @@
 #X obj 86 170 + 1;
 #X obj 111 170 % 20;
 #X obj 132 52 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 200 1;
 #X obj 157 51 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 0 1;
 #X obj 181 51 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
@@ -69,7 +69,7 @@
 #X obj 205 51 knob 20 20 0 20 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 0 1;
 #X obj 28 63 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #N canvas 192 291 450 300 setGEM 0;
 #X obj 116 30 inlet load;
 #X obj 194 94 gemwin;
@@ -93,7 +93,7 @@
 #X connect 9 0 1 0;
 #X connect 10 0 1 0;
 #X restore 28 79 pd setGEM;
-#X obj 71 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 71 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X text 26 47 GEM SET;
 #X obj 87 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -108,7 +108,7 @@
 #X msg 79 451 auto \$1;
 #X obj 193 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 211 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 211 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 190 1 inlet vidtxtcolUI;
 #X connect 0 0 1 0;

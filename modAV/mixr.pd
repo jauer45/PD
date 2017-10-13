@@ -1,37 +1,24 @@
-#N canvas 158 434 396 200 10;
-#X msg 69 101 open example.wav \, start;
-#X msg 221 102 stop;
-#X obj 19 166 writesf~ 2;
-#X msg 258 101 open example.wav \, 1;
-#X obj 258 127 readsf~ 2;
-#X obj 206 175 outlet~;
-#X obj 258 174 outlet~;
-#X obj 309 174 outlet;
-#X obj 162 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 185 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 209 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 137 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 19 101 *~;
-#X obj 18 62 *~ 0.5;
-#X obj 17 33 inlet~;
-#X connect 0 0 2 0;
-#X connect 0 0 2 1;
-#X connect 1 0 2 0;
-#X connect 1 0 2 1;
-#X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X connect 4 1 6 0;
-#X connect 4 2 7 0;
-#X connect 8 0 0 0;
-#X connect 9 0 1 0;
-#X connect 10 0 3 0;
-#X connect 11 0 12 1;
-#X connect 12 0 2 0;
-#X connect 12 0 2 1;
-#X connect 13 0 12 0;
-#X connect 14 0 13 0;
-#X coords 0 -1 1 1 140 30 1 95 20;
+#N canvas 441 387 303 290 10;
+#X obj 10 221 outlet~;
+#X obj 10 54 inlet~;
+#X obj 52 54 inlet~;
+#X obj 106 43 hsl 50 14 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 11 157 *~;
+#X floatatom 54 92 5 0 0 0 - - -;
+#X msg 54 115 \$1 20;
+#X obj 54 141 line~;
+#X obj 56 173 env~ 128;
+#X obj 56 198 - 100;
+#X obj 180 30 vu 14 80 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X coords 0 -1 1 1 140 100 1 95 20;
