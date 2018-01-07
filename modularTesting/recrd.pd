@@ -1,0 +1,36 @@
+#N canvas 347 245 396 200 10;
+#X msg 69 101 open example.wav \, start;
+#X msg 221 102 stop;
+#X obj 19 166 writesf~ 2;
+#X msg 258 101 open example.wav \, 1;
+#X obj 258 127 readsf~ 2;
+#X obj 206 175 outlet~;
+#X obj 258 174 outlet~;
+#X obj 309 174 outlet;
+#X obj 162 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 185 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 209 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 137 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 18 101 *~;
+#X obj 15 65 *~ 0.5;
+#X obj 17 33 inlet~;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 4 2 7 0;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 10 0 3 0;
+#X connect 11 0 12 1;
+#X connect 12 0 2 0;
+#X connect 12 0 2 1;
+#X connect 14 0 12 0;
+#X coords 0 -1 1 1 140 30 1 95 20;
