@@ -1,0 +1,41 @@
+#N canvas 685 379 439 217 10;
+#X msg 40 80 roomsize \$1;
+#X msg 118 80 damping \$1;
+#X obj 43 45 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 121 44 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 193 44 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 264 44 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 334 44 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 190 79 width \$1;
+#X msg 261 79 wet \$1;
+#X msg 331 79 dry \$1;
+#X text 18 -1 REVERB CNTRL;
+#X obj 190 130 freeverb~;
+#X obj 191 161 *~ 0.4;
+#X obj 241 161 *~ 0.4;
+#X obj 191 193 outlet~;
+#X obj 242 193 outlet~;
+#X obj 39 113 inlet~;
+#X obj 333 113 inlet~;
+#X connect 0 0 11 0;
+#X connect 1 0 11 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 11 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 12 0 14 0;
+#X connect 13 0 15 0;
+#X connect 16 0 11 0;
+#X connect 17 0 11 1;
+#X coords 0 -1 1 1 390 40 1 20 30;
